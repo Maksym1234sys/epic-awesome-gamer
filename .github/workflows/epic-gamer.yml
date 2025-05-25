@@ -23,6 +23,7 @@ jobs:
         cache: 'pip' # caching pip dependencies
     - name: 安装依赖
       run: |
+        git clone https://github.com/QIN2DIM/epic-awesome-gamer.git epic
         pip install --upgrade aiohttp aiosignal annotated-types anyio attrs browserforge cachetools camoufox certifi charset-normalizer click colorama contourpy cycler cython fonttools frozenlist geoip2 google-auth google-genai greenlet h11 h2 hcaptcha-challenger hpack httpcore httpx hyperframe idna iniconfig kiwisolver language-tags loguru lxml markdown-it-py matplotlib maxminddb mdurl msgpack multidict numpy opencv-python orjson packaging pillow platformdirs playwright propcache pyasn1-modules pydantic pydantic-settings pyparsing pysocks pytest pyyaml python-dateutil pytz requests rsa screeninfo sniffio tenacity tqdm typer typing-extensions ua-parser websockets yarl win32-setctime
         playwright install firefox
         playwright install-deps firefox
