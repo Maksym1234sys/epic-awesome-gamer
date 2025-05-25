@@ -17,15 +17,15 @@ jobs:
     - name: 初始化环境 & 拉取项目
       run: |
         sudo timedatectl set-timezone "Asia/Shanghai"
-        git clone https://github.com/QIN2DIM/epic-awesome-gamer.git epic
-        cp epic/requirements.txt .
+        git clone https://github.com/QIN2DIM/epic-awesome-gamer/blob/main
+        cp uv.lock
     - uses: actions/setup-python@v4
       with:
         python-version: "3.10"
         cache: 'pip' # caching pip dependencies
     - name: 安装依赖
       run: |
-        pip install -r epic/requirements.txt
+        pip install -r uv.lock
         playwright install firefox
         playwright install-deps firefox
     - name: 启动项目
