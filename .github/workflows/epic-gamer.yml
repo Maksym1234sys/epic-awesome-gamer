@@ -18,7 +18,6 @@ jobs:
       run: |
         sudo timedatectl set-timezone "Asia/Shanghai"
         git clone https://github.com/QIN2DIM/epic-awesome-gamer.git epic
-        cp epic/uv.lock
     - uses: actions/setup-python@v4
       with:
         python-version: "3.10"
