@@ -23,7 +23,7 @@ jobs:
         cache: 'pip' # caching pip dependencies
     - name: 安装依赖
       run: |
-        pip install -r uv.lock
+        pip install -r requirements.txt
         playwright install firefox
         playwright install-deps firefox
     - name: 启动项目
